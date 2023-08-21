@@ -1,13 +1,14 @@
-import { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
+import "./styles/componentStyles.css";
 
-export function Layout({ children }: PropsWithChildren<ReactNode>) {
+export function Layout({ children }: PropsWithChildren) {
   return (
-    <>
+    <div className="container">
       <Header />
-      <main>{children}</main>
+      <main className="main-body">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

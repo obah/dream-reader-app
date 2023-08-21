@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.main-body {
+  width: calc(100% - 10vw);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1600px;
+  }
+}/*# sourceMappingURL=componentStyles.css.map */
