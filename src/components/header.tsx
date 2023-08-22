@@ -1,5 +1,7 @@
+import { NavLink } from "react-router-dom";
 import { INavItems } from "../types";
 import { Navbar } from "./navbar";
+import "./styles/componentStyles.css";
 
 const navItems: INavItems[] = [
   { name: "Home", href: "/", current: true },
@@ -10,16 +12,19 @@ const navItems: INavItems[] = [
 export function Header() {
   return (
     <header>
-      <div>Header</div>
-      <nav>
-        <ul>
-          {navItems.map((item) => (
-            <Navbar items={item} />
-          ))}
-        </ul>
-      </nav>
+      <div className="header__container">
+        <div className="header__title">
+          <NavLink to="/">Dream Reader</NavLink>
+        </div>
+        <nav className="navbar">
+          <button className="mobile-nav"></button>
+          <ul className="navbar__items">
+            {navItems.map((item) => (
+              <Navbar items={item} />
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
-
-// TODO 1. Add navbar here 2. Create a component that uses the header everywhere, like next's layout.js
