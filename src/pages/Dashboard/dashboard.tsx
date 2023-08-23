@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useRef } from "react";
 import useBooks from "../../components/hooks/useBooks";
 import { Layout } from "../../components/layout";
 
 export function Dashboard() {
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const { books } = useBooks({ query: searchQuery });
+  const searchRef = useRef<HTMLInputElement>(null);
+  const { books, setSearchQuery } = useBooks();
+
+  const handleSearch = () => {
+    const searchQuery = searchRef.current?.value;
+    setSearchQuery(searchQuery);
+  };
+
   console.log(books);
 
   return (
@@ -15,13 +21,8 @@ export function Dashboard() {
       </div>
       <div>
         <label htmlFor="bookQuery">Search for a book: </label>
-        <input
-          type="text"
-          name="bookQuery"
-          id="bookQuery"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+        <input ref={searchRef} type="text" name="bookQuery" id="bookQuery" />
+        <button onClick={handleSearch}>Search</button>
       </div>
     </Layout>
   );

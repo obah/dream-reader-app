@@ -3,3 +3,5 @@ export interface INavItems {
   href: string;
   current?: boolean;
 }
+
+export type InputRef = string | undefined;

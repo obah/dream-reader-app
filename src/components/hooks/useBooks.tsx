@@ -1,16 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { InputRef } from "../../types";
 
-type Props = {
-  query: string;
-};
-
-function useBooks({ query }: Props) {
+function useBooks() {
   const [books, setBooks] = useState<unknown[]>([]);
+  const [searchQuery, setSearchQuery] = useState<InputRef>("");
 
   const getBooks = async () => {
     const booksData = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=5`
+      `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=5`
     );
 
     if (booksData && booksData.data) {
@@ -20,9 +18,10 @@ function useBooks({ query }: Props) {
 
   useEffect(() => {
     getBooks();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchQuery]);
 
-  return { books };
+  return { books, setSearchQuery };
 }
 
 export default useBooks;
