@@ -2,22 +2,18 @@
 import { BookData } from "../types";
 
 type Props = {
-  data: BookData[];
+  data: BookData;
 };
 
 function SearchResults({ data }: Props) {
-  console.log(data);
+  const { title, authors, subtitle } = data;
 
   return (
-    <div>
-      {data?.length > 0 ? (
-        <div>
-          <h2>Books found</h2>
-        </div>
-      ) : (
-        ""
-      )}
-    </div>
+    <>
+      <h2>{title}</h2>
+      <span>{subtitle}</span>
+      <p>{authors}</p>
+    </>
   );
 }
 

@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { BookData, GoogleBooksResponse, InputRef } from "../../types";
 
 function useBooks() {
-  const [booksData, setBooksData] = useState<GoogleBooksResponse[]>([]);
   const [searchQuery, setSearchQuery] = useState<InputRef>("");
   const [books, setBooks] = useState<BookData[]>([]);
 
@@ -13,19 +12,16 @@ function useBooks() {
     );
 
     if (response && response.data) {
-      setBooksData(response.data.items);
-    }
+      const initialRes: GoogleBooksResponse[] = response.data.items;
+      const filteredRes: BookData[] = initialRes.map((item) => ({
+        id: item.id,
+        title: item.volumeInfo.title,
+        subtitle: item.volumeInfo.subtitle,
+        authors: item.volumeInfo.authors,
+      }));
 
-    const booksInfo: BookData[] = [];
-    for (let i = 0; i <= booksData.length - 1; i++) {
-      booksInfo.push(booksData[i].volumeInfo);
+      setBooks(filteredRes);
     }
-    const filteredbooks: BookData[] = booksInfo.map((book) => ({
-      title: book.title,
-      subtitle: book.subtitle,
-      authors: book.authors,
-    }));
-    setBooks(filteredbooks);
   };
 
   useEffect(() => {

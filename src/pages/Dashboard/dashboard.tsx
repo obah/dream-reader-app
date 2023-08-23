@@ -23,7 +23,12 @@ export function Dashboard() {
         <input ref={searchRef} type="text" name="bookQuery" id="bookQuery" />
         <button onClick={handleSearch}>Search</button>
       </div>
-      <SearchResults data={books} />
+      {books.length > 0 &&
+        books.map((book) => (
+          <div key={book.id}>
+            <SearchResults data={book} />
+          </div>
+        ))}
     </Layout>
   );
 }

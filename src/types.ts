@@ -15,6 +15,7 @@ export interface GoogleBooksResponse {
 }
 
 export interface BookData {
+  id: string;
   title: string;
   subtitle?: string;
   authors: string[];
