@@ -5,3 +5,17 @@ export interface INavItems {
 }
 
 export type InputRef = string | undefined;
+
+export interface GoogleBooksResponse {
+  kind: string;
+  id: string;
+  etag: string;
+  selflink: string;
+  volumeInfo: BookData;
+}
+
+export interface BookData {
+  title: string;
+  subtitle?: string;
+  authors: string[];
+}

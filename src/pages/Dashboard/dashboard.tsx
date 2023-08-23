@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import useBooks from "../../components/hooks/useBooks";
 import { Layout } from "../../components/layout";
+import SearchResults from "../../components/searchResults";
 
 export function Dashboard() {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -10,8 +11,6 @@ export function Dashboard() {
     const searchQuery = searchRef.current?.value;
     setSearchQuery(searchQuery);
   };
-
-  console.log(books);
 
   return (
     <Layout>
@@ -24,6 +23,7 @@ export function Dashboard() {
         <input ref={searchRef} type="text" name="bookQuery" id="bookQuery" />
         <button onClick={handleSearch}>Search</button>
       </div>
+      <SearchResults data={books} />
     </Layout>
   );
 }
