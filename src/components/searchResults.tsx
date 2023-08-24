@@ -1,4 +1,5 @@
-// import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { Id, ReadingListContext } from "../context/readingListContext";
 import { BookData } from "../types";
 
 type Props = {
@@ -6,13 +7,22 @@ type Props = {
 };
 
 function SearchResults({ data }: Props) {
-  const { title, authors, subtitle } = data;
+  const { id, title, authors, subtitle } = data;
+
+  const { addBook } = useContext(ReadingListContext);
+
+  const addBookId = (id: Id) => {
+    if (addBook) {
+      addBook(id);
+    }
+  };
 
   return (
     <>
       <h2>{title}</h2>
       <span>{subtitle}</span>
       <p>{authors}</p>
+      <button onClick={() => addBookId(id)}>Add to List</button>
     </>
   );
 }

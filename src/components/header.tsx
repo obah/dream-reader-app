@@ -20,7 +20,7 @@ export function Header() {
           <button className="mobile-nav"></button>
           <ul className="navbar__items">
             {navItems.map((item) => (
-              <Navbar items={item} />
+              <Navbar key={item.name} items={item} />
             ))}
           </ul>
         </nav>
