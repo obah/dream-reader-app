@@ -14,21 +14,34 @@ function ReadingList() {
     <>
       <h1>My Personal Reading List</h1>
       <div>
-        {bookList ? (
-          <div>
-            {bookList.map((item) => (
-              <div key={item}>
-                <p>{item}</p>
-                <button onClick={() => removeBookId(item)}>Remove Book</button>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p>No books in your reading list</p>
-        )}
+        <div>
+          {bookList && (
+            <div>
+              {bookList.map((item) => (
+                <div key={item}>
+                  <p>{item}</p>
+                  <button onClick={() => removeBookId(item)}>
+                    Remove Book
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <div>
+          {bookList?.length === 0 ? (
+            <p>No books in your reading list yet</p>
+          ) : (
+            <p>Happy reading</p>
+          )}
+        </div>
       </div>
     </>
   );
 }
+
+// : (
+// <p>No books in your reading list</p>
+// )
 
 export default ReadingList;
