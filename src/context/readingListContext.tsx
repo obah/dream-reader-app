@@ -23,13 +23,10 @@ export function ReadingListContextProvider({ children }: PropsWithChildren) {
     }
   }, [bookList, ls]);
 
-  const addBook = (bookId: Id) => {
-    setBookList((prev) => [...prev, bookId]);
-  };
+  const addBook = (bookId: Id) => setBookList((prev) => [...prev, bookId]);
 
-  const removeBook = (bookId: Id) => {
+  const removeBook = (bookId: Id) =>
     setBookList((prev) => prev.filter((id) => id !== bookId));
-  };
 
   return (
     <ReadingListContext.Provider value={{ bookList, addBook, removeBook }}>

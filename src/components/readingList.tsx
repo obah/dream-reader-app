@@ -4,11 +4,7 @@ import { Id, ReadingListContext } from "../context/readingListContext";
 function ReadingList() {
   const { bookList, removeBook } = useContext(ReadingListContext);
 
-  const removeBookId = (id: Id) => {
-    if (removeBook) {
-      removeBook(id);
-    }
-  };
+  const removeBookId = (id: Id) => (removeBook ? removeBook(id) : null);
 
   return (
     <>
@@ -28,6 +24,7 @@ function ReadingList() {
             </div>
           )}
         </div>
+
         <div>
           {bookList?.length === 0 ? (
             <p>No books in your reading list yet</p>
@@ -39,9 +36,5 @@ function ReadingList() {
     </>
   );
 }
-
-// : (
-// <p>No books in your reading list</p>
-// )
 
 export default ReadingList;

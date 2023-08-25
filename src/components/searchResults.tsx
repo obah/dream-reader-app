@@ -11,11 +11,7 @@ function SearchResults({ data }: Props) {
 
   const { addBook } = useContext(ReadingListContext);
 
-  const addBookId = (id: Id) => {
-    if (addBook) {
-      addBook(id);
-    }
-  };
+  const addBookId = (id: Id) => (addBook ? addBook(id) : null);
 
   return (
     <>
