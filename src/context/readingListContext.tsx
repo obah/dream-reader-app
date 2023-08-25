@@ -13,7 +13,7 @@ export const ReadingListContext = createContext<IReadingListContext>({});
 export function ReadingListContextProvider({ children }: PropsWithChildren) {
   const ls = typeof window !== "undefined" ? window.localStorage : null;
   const key = "readingList";
-  const previousBookList: Id[] = ls ? JSON.parse(ls.getItem(key)) : [];
+  const previousBookList: Id[] = ls ? JSON.parse(`${ls.getItem(key)}`) : [];
 
   const [bookList, setBookList] = useState<Id[]>(previousBookList || []);
 
