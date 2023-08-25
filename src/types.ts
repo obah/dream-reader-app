@@ -14,9 +14,17 @@ export interface GoogleBooksResponse {
   volumeInfo: BookData;
 }
 
+// interface ImageLinks{
+//   smallThumbnail:string;
+//   thumbnail:string;
+// }
 export interface BookData {
   id: string;
   title: string;
   subtitle?: string;
   authors: string[];
+  imageLinks?: {
+    thumbnail: string;
+  };
+  image?: string;
 }
