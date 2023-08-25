@@ -13,11 +13,6 @@ export interface GoogleBooksResponse {
   selflink: string;
   volumeInfo: BookData;
 }
-
-// interface ImageLinks{
-//   smallThumbnail:string;
-//   thumbnail:string;
-// }
 export interface BookData {
   id: string;
   title: string;
@@ -26,5 +21,12 @@ export interface BookData {
   imageLinks?: {
     thumbnail: string;
   };
+  image?: string;
+}
+
+export interface ReadingListData {
+  id: string;
+  title: string;
+  authors: string[];
   image?: string;
 }

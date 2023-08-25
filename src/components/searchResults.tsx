@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Id, ReadingListContext } from "../context/readingListContext";
-import { BookData } from "../types";
+import { ReadingListContext } from "../context/readingListContext";
+import { BookData, ReadingListData } from "../types";
 
 type Props = {
   data: BookData;
@@ -11,16 +11,20 @@ function SearchResults({ data }: Props) {
 
   const { addBook } = useContext(ReadingListContext);
 
-  const addBookId = (id: Id) => (addBook ? addBook(id) : null);
+  const bookData: ReadingListData = { id, authors, title, image };
+
+  const addBookId = (book: ReadingListData) => (addBook ? addBook(book) : null);
 
   return (
     <>
-      <div>{image ? <img src={image} alt="book thumbnail" /> : ""}</div>
+      <div>
+        <img src={image} alt="book thumbnail" />
+      </div>
 
       <h2>{title}</h2>
       <span>{subtitle}</span>
       <p>{authors}</p>
-      <button onClick={() => addBookId(id)}>Add to List</button>
+      <button onClick={() => addBookId(bookData)}>Add to List</button>
     </>
   );
 }
