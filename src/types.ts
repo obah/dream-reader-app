@@ -22,6 +22,7 @@ export interface BookData {
     thumbnail: string;
   };
   image?: string;
+  previewLink: string;
 }
 
 export interface ReadingListData {
@@ -29,4 +30,5 @@ export interface ReadingListData {
   title: string;
   authors: string[];
   image?: string;
+  previewLink: string;
 }

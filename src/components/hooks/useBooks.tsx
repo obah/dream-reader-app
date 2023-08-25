@@ -19,6 +19,7 @@ function useBooks() {
         subtitle: item.volumeInfo.subtitle,
         authors: item.volumeInfo.authors,
         image: item.volumeInfo.imageLinks?.thumbnail,
+        previewLink: item.volumeInfo.previewLink,
       }));
 
       setBooks(filteredRes);

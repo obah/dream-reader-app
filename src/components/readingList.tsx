@@ -18,9 +18,18 @@ function ReadingList() {
                   <img src={item.image} alt="Book thumbnail" />
                   <h2>{item.title}</h2>
                   <p>{item.authors}</p>
-                  <button onClick={() => removeBookId(item.id)}>
-                    Remove Book
-                  </button>
+                  <div>
+                    <a
+                      href={`${item.previewLink}`}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      View Preview
+                    </a>
+                    <button onClick={() => removeBookId(item.id)}>
+                      Remove Book
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>

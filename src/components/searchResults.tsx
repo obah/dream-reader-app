@@ -7,11 +7,11 @@ type Props = {
 };
 
 function SearchResults({ data }: Props) {
-  const { id, title, authors, subtitle, image } = data;
+  const { id, title, authors, subtitle, image, previewLink } = data;
 
   const { addBook } = useContext(ReadingListContext);
 
-  const bookData: ReadingListData = { id, authors, title, image };
+  const bookData: ReadingListData = { id, authors, title, image, previewLink };
 
   const addBookId = (book: ReadingListData) => (addBook ? addBook(book) : null);
 
