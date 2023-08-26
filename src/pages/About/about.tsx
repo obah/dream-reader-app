@@ -3,8 +3,8 @@ import { Layout } from "../../components/layout";
 export function About() {
   return (
     <Layout>
-      <section className="about-section">
-        <div className="about-top-text">
+      <section className="about__section">
+        <div className="about__top-text">
           <h1>What is Dream Reader?</h1>
           <p>
             It is a simple application to help readers create a list of the
@@ -17,7 +17,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="about-final-text">
+        <div className="about__final-text">
           <h1>How can I use Dream Reader?</h1>
           <p>
             Just search for the book you want to access, then add it to your

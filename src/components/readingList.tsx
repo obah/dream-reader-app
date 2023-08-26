@@ -8,13 +8,13 @@ function ReadingList() {
 
   return (
     <>
-      <h1>My Personal Reading List</h1>
+      <h1 className="rl__header">My Personal Reading List</h1>
       <div>
-        <div>
+        <div className="rl__collection">
           {bookList && (
             <div>
               {bookList.map((item) => (
-                <div key={item.id}>
+                <div key={item.id} className="rl__item">
                   <img src={item.image} alt="Book thumbnail" />
                   <h2>{item.title}</h2>
                   <p>{item.authors}</p>
@@ -36,7 +36,7 @@ function ReadingList() {
           )}
         </div>
 
-        <div>
+        <div className="rl__last-text">
           {bookList?.length === 0 ? (
             <p>No books in your reading list yet</p>
           ) : (

@@ -16,8 +16,8 @@ function SearchResults({ data }: Props) {
   const addBookId = (book: ReadingListData) => (addBook ? addBook(book) : null);
 
   return (
-    <>
-      <div>
+    <div className="item">
+      <div className="item__image">
         <img src={image} alt="book thumbnail" />
       </div>
 
@@ -25,7 +25,7 @@ function SearchResults({ data }: Props) {
       <span>{subtitle}</span>
       <p>{authors}</p>
       <button onClick={() => addBookId(bookData)}>Add to List</button>
-    </>
+    </div>
   );
 }
 
