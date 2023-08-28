@@ -1,5 +1,5 @@
 import { Layout } from "../../components/layout";
-import { FaArrowRight } from "react-icons/fa";
+import { RxArrowTopRight } from "react-icons/rx";
 
 export function Landing() {
   return (
@@ -16,7 +16,7 @@ export function Landing() {
 
           <div className="landing__button">
             <button>
-              Launch App <FaArrowRight />
+              Launch App <RxArrowTopRight />
             </button>
           </div>
 
