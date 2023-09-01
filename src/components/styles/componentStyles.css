@@ -3,6 +3,8 @@
   width: 100vw;
   min-width: 320px;
   min-height: 100vh;
+  background: #08d9d6;
+  color: #252a34;
 }
 
 a {
@@ -19,16 +21,21 @@ li {
 }
 
 .main-body {
-  width: 85%;
+  width: 98%;
   margin: 0 auto;
   min-height: 90vh;
+  border-radius: 0.2rem;
+  padding: 4rem 3rem;
+  background: #eaeaea;
+  color: #252a34;
+  box-shadow: 0px 0px 5px 1px #9ea7ba;
+  overflow: hidden;
 }
 
 header {
   padding: 1rem 1.2rem;
   font-weight: 600;
   font-size: 1.1rem;
-  border-bottom: 1px solid black;
 }
 
 .header__container {
@@ -78,17 +85,12 @@ header {
   }
   .navbar__items a {
     padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all ease-out 200ms;
+    transition: all ease-out 300ms;
   }
   .navbar__items a:hover {
-    background-color: gray;
-    color: white;
-  }
-  .navbar__items a:active {
-    padding: 0.3rem 0.8rem;
+    color: #eaeaea;
   }
   .navbar__items a.active {
-    background-color: red;
+    text-decoration: underline;
   }
 }/*# sourceMappingURL=componentStyles.css.map */

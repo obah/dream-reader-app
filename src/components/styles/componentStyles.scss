@@ -5,6 +5,8 @@
   width: 100vw;
   min-width: 320px;
   min-height: 100vh;
+  background: $secondary-color;
+  color: $primary-color;
 }
 
 a {
@@ -21,18 +23,21 @@ li {
 }
 
 .main-body {
-  // width: calc(100% - 10vw);
-  width: 85%;
+  width: 98%;
   margin: 0 auto;
   min-height: 90vh;
+  border-radius: 0.2rem;
+  padding: 4rem 3rem;
+  background: $default-color;
+  color: $primary-color;
+  box-shadow: 0px 0px 5px 1px lighten($primary-color, 50%);
+  overflow: hidden;
 }
 
 header {
   padding: 1rem 1.2rem;
-  // font-size: 0.8rem;
   font-weight: 600;
   font-size: 1.1rem;
-  border-bottom: 1px solid black;
 }
 
 .header__container {
@@ -81,27 +86,19 @@ header {
 
   .navbar__items {
     display: flex;
-    // gap: 1.5rem;
     width: 100%;
 
     a {
       padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: all ease-out 200ms;
-      // border: 1px green solid;
+      transition: all ease-out 300ms;
     }
 
     a:hover {
-      background-color: gray;
-      color: white;
-    }
-
-    a:active {
-      padding: 0.3rem 0.8rem;
+      color: $default-color;
     }
 
     a.active {
-      background-color: red;
+      text-decoration: underline;
     }
   }
 }
