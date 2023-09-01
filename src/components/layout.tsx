@@ -3,7 +3,11 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 import "./styles/componentStyles.css";
 
-export function Layout({ children }: PropsWithChildren) {
+interface Props {
+  children: JSX.Element;
+}
+
+export function Layout({ children }: PropsWithChildren<Props>) {
   return (
     <div className="container">
       <Header />
