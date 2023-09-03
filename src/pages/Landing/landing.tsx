@@ -8,29 +8,21 @@ export function Landing() {
     <Layout>
       <section className="landing__section">
         <div className="landing__text">
-          <div className="landing__top-text">
-            <h3>Hello Reader,</h3>
-            <h1>
-              All your favorite books in one place <br />
-              <span>Dream Reader</span>{" "}
-            </h1>
-          </div>
+          <h3>Hello Reader,</h3>
+          <h1>
+            All your favorite books in one place <br />
+            <span>Dream Reader</span>{" "}
+          </h1>
 
-          <div className="landing__button">
-            <button>
-              Launch App <RxArrowTopRight />
-            </button>
-          </div>
+          <button>
+            Launch App <RxArrowTopRight className="button-icon" />
+          </button>
 
-          <div className="landing__final-text">
-            <p>
-              <i>
-                "Books are a uniquely portable magic."
-                <br />
-                <span>— Stephen King, On Writing: A Memoir of the Craft</span>
-              </i>
-            </p>
-          </div>
+          <p>
+            "Books are a uniquely portable magic."
+            <br />
+            <span>— Stephen King, On Writing: A Memoir of the Craft</span>
+          </p>
         </div>
 
         <div className="landing__image">
