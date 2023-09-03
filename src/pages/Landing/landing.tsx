@@ -1,5 +1,7 @@
 import { Layout } from "../../components/layout";
 import { RxArrowTopRight } from "react-icons/rx";
+import BookShelf from "../../assets/images/book_shelf.jpg";
+import "./styles/landing.css";
 
 export function Landing() {
   return (
@@ -32,7 +34,7 @@ export function Landing() {
         </div>
 
         <div className="landing__image">
-          {/* put the animated image here */}
+          <img src={BookShelf} alt="a book shelf" />
         </div>
       </section>
     </Layout>

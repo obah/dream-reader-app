@@ -1,1 +1,14 @@
-/*# sourceMappingURL=landing.css.map */
+.landing__section {
+  display: flex;
+}
+
+.landing__image {
+  width: 80%;
+  height: 80%;
+}
+.landing__image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80%;
+  height: 80%;
+}/*# sourceMappingURL=landing.css.map */
