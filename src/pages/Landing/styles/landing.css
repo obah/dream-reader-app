@@ -25,6 +25,9 @@
   font-size: 1.4rem;
   font-weight: 700;
 }
+.landing__text h1 span {
+  text-decoration: underline;
+}
 .landing__text h3 {
   font-size: 0.7rem;
   font-weight: 500;
@@ -60,5 +63,43 @@
 @media screen and (min-width: 768px) {
   .landing__section {
     flex-direction: row;
+  }
+  .landing__image {
+    height: 70vh;
+    width: 80%;
+  }
+  .landing__image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+  .landing__text {
+    width: 100%;
+    padding: 0 3rem;
+    gap: 0;
+    justify-content: space-around;
+  }
+  .landing__text h1 {
+    font-size: 1.6rem;
+  }
+  .landing__text h3 {
+    font-size: 0.9rem;
+  }
+  .landing__text p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .landing__text {
+    justify-content: space-evenly;
+  }
+  .landing__text h1 {
+    font-size: 1.8rem;
+  }
+  .landing__text h3 {
+    font-size: 1.1rem;
+  }
+  .landing__text p {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=landing.css.map */
