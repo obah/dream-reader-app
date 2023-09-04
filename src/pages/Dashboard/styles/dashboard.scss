@@ -75,6 +75,11 @@
   align-items: center;
   text-align: center;
   gap: 0.5rem;
+
+  img {
+    width: 120px;
+    height: 180px;
+  }
 }
 
 .rl__buttons {
@@ -106,5 +111,58 @@
     background-color: red;
     color: $primary-color;
     font-weight: 500;
+  }
+}
+
+.dashboard__results {
+  margin-bottom: 2rem;
+}
+
+.search-item {
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+.search-result {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    background: $secondary-color;
+    color: $primary-color;
+    border: 0;
+    border-radius: 20px;
+  }
+}
+
+.search__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  span {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 400;
   }
 }

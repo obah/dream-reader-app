@@ -65,6 +65,10 @@
   text-align: center;
   gap: 0.5rem;
 }
+.rl__item img {
+  width: 120px;
+  height: 180px;
+}
 
 .rl__buttons {
   display: flex;
@@ -92,4 +96,52 @@
   background-color: red;
   color: #252a34;
   font-weight: 500;
+}
+
+.dashboard__results {
+  margin-bottom: 2rem;
+}
+
+.search-item {
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.search-item img {
+  width: 100px;
+  height: 150px;
+}
+
+.search-result {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.search-result button {
+  padding: 0.5rem 1rem;
+  background: #08d9d6;
+  color: #252a34;
+  border: 0;
+  border-radius: 20px;
+}
+
+.search__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+.search__text h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.search__text span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+.search__text p {
+  font-size: 0.9rem;
+  font-weight: 400;
 }/*# sourceMappingURL=dashboard.css.map */
