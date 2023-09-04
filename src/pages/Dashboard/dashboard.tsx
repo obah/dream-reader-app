@@ -3,6 +3,8 @@ import useBooks from "../../components/hooks/useBooks";
 import { Layout } from "../../components/layout";
 import SearchResults from "../../components/searchResults";
 import ReadingList from "../../components/readingList";
+import { BsSearch } from "react-icons/bs";
+import "./styles/dashboard.css";
 
 export function Dashboard() {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -17,7 +19,7 @@ export function Dashboard() {
     <Layout>
       <section className="dashboard__main">
         <div className="dashboard__text">
-          <h1>The Dream Reader</h1>
+          <h1>Dream Reader</h1>
           <p>Your personal portal to all books on the internet</p>
         </div>
 
@@ -28,7 +30,9 @@ export function Dashboard() {
             name="bookQuery"
             placeholder="What book is on your mind?"
           />
-          <button onClick={handleSearch}>Search</button>
+          <button onClick={handleSearch} className="search-icon">
+            <BsSearch />
+          </button>
         </div>
 
         <div className="dashboard__results">
@@ -41,7 +45,7 @@ export function Dashboard() {
         </div>
       </section>
 
-      <section className="readingList">
+      <section className="reading-list">
         <ReadingList />
       </section>
     </Layout>

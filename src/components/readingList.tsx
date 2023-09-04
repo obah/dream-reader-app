@@ -17,17 +17,16 @@ function ReadingList() {
                 <div key={item.id} className="rl__item">
                   <img src={item.image} alt="Book thumbnail" />
                   <h2>{item.title}</h2>
-                  <p>{item.authors}</p>
-                  <div>
+                  <div className="rl__buttons">
                     <a
                       href={`${item.previewLink}`}
                       target="_blank"
                       rel="noopener"
                     >
-                      View Preview
+                      Preview
                     </a>
                     <button onClick={() => removeBookId(item.id)}>
-                      Remove Book
+                      Remove
                     </button>
                   </div>
                 </div>
@@ -40,7 +39,7 @@ function ReadingList() {
           {bookList?.length === 0 ? (
             <p>No books in your reading list yet</p>
           ) : (
-            <p>Happy reading</p>
+            <p>Happy reading...</p>
           )}
         </div>
       </div>

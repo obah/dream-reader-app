@@ -4,7 +4,7 @@ import { Header } from "./header";
 import "./styles/componentStyles.css";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
 export function Layout({ children }: PropsWithChildren<Props>) {
