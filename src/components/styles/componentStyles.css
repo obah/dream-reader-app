@@ -21,7 +21,7 @@ li {
 }
 
 .main-body {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   min-height: 90vh;
   border-radius: 0.2rem;
@@ -95,4 +95,4 @@ header {
     max-width: 1400px;
     padding: 5rem;
   }
-} /*# sourceMappingURL=componentStyles.css.map */
+}/*# sourceMappingURL=componentStyles.css.map */
