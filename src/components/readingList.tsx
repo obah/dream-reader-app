@@ -10,9 +10,9 @@ function ReadingList() {
     <>
       <h1 className="rl__header">My Personal Reading List</h1>
       <div>
-        <div className="rl__collection">
+        <div>
           {bookList && (
-            <div>
+            <div className="rl__collection">
               {bookList.map((item) => (
                 <div key={item.id} className="rl__item">
                   <img src={item.image} alt="Book thumbnail" />
