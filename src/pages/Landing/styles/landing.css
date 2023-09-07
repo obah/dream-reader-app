@@ -36,7 +36,7 @@
   font-size: 0.8rem;
   font-weight: 400;
 }
-.landing__text button {
+.landing__text a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@
   border: 2px solid #252a34;
   transition: all ease-out 300ms;
 }
-.landing__text button:hover {
+.landing__text a:hover {
   background-color: #f0eeee;
   color: #252a34;
 }
@@ -88,7 +88,7 @@
   .landing__text p {
     font-size: 1rem;
   }
-  .landing__text button {
+  .landing__text a {
     width: 180px;
     height: 50px;
     font-size: 1.1rem;

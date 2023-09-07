@@ -2,6 +2,7 @@ import { Layout } from "../../components/layout";
 import { RxArrowTopRight } from "react-icons/rx";
 import BookShelf from "../../assets/images/book_shelf.jpg";
 import "./styles/landing.css";
+import { Link } from "react-router-dom";
 
 export function Landing() {
   return (
@@ -14,9 +15,9 @@ export function Landing() {
             <span>Dream Reader</span>{" "}
           </h1>
 
-          <button>
+          <Link to={"/dashboard"}>
             Launch App <RxArrowTopRight className="button-icon" />
-          </button>
+          </Link>
 
           <p>
             "Books are a uniquely portable magic."
