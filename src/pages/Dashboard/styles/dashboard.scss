@@ -64,13 +64,10 @@
 }
 
 .rl__collection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
 
   padding: 1rem 0;
-  // border: 1px solid black; //--used for debugging
 }
 
 .rl__item {
@@ -133,11 +130,6 @@
 }
 
 .search-item {
-  display: flex;
-  text-align: left;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-
   img {
     width: 100px;
     height: 150px;
@@ -145,10 +137,11 @@
 }
 
 .search-result {
-  background: white;
-  padding: 1rem;
+  padding: 1rem 0;
   border-radius: 10px;
   margin-bottom: 1rem;
+
+  background: white;
 
   button {
     padding: 0.5rem 1rem;
@@ -162,21 +155,41 @@
 .search__text {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   justify-content: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px $secondary-color solid;
+
+  h2,
+  p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 100%;
+    padding: 0.5rem;
+  }
 
   h2 {
+    height: 50px;
     font-size: 1rem;
     font-weight: 500;
   }
 
-  span {
-    font-size: 0.7rem;
-    font-weight: 300;
-  }
-
   p {
+    height: 30px;
     font-size: 0.9rem;
     font-weight: 400;
+  }
+}
+
+@include media_md {
+  .rl__collection {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include media_lg {
+  .rl__collection {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

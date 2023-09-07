@@ -7,7 +7,7 @@ type Props = {
 };
 
 function SearchResults({ data }: Props) {
-  const { id, title, authors, subtitle, image, previewLink } = data;
+  const { id, title, authors, image, previewLink } = data;
 
   const { addBook } = useContext(ReadingListContext);
 
@@ -21,7 +21,6 @@ function SearchResults({ data }: Props) {
         <img src={image} alt="book thumbnail" />
         <div className="search__text">
           <h2>{title}</h2>
-          <span>{subtitle}</span>
           <p>{authors}</p>
         </div>
       </div>
