@@ -8,7 +8,7 @@ function useBooks() {
 
   const getBooks = async () => {
     const response = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=10`
+      `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=9`
     );
 
     if (response && response.data) {

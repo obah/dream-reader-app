@@ -24,7 +24,7 @@ function SearchResults({ data }: Props) {
           <p>{authors}</p>
         </div>
       </div>
-      <button onClick={() => addBookId(bookData)}>Add to List</button>
+      <button onClick={() => addBookId(bookData)}>Add to List +</button>
     </div>
   );
 }
