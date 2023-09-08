@@ -1,1 +1,12 @@
-/*# sourceMappingURL=about.css.map */
+.about__section {
+  width: 75%;
+  margin: 0 auto;
+}
+.about__section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about__top-text {
+  margin-bottom: 5rem;
+}/*# sourceMappingURL=about.css.map */
