@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { ReadingListContext } from "../context/readingListContext";
+import { Id, ReadingListContext } from "../context/readingListContext";
 import { BookData, ReadingListData } from "../types";
+import useIdList from "./hooks/useIdList";
 
 type Props = {
   data: BookData;
@@ -8,12 +9,15 @@ type Props = {
 
 function SearchResults({ data }: Props) {
   const { id, title, authors, image, previewLink } = data;
+  const { listItems } = useIdList();
 
-  const { addBook } = useContext(ReadingListContext);
+  const { addBook, removeBook } = useContext(ReadingListContext);
 
   const bookData: ReadingListData = { id, authors, title, image, previewLink };
 
   const addBookId = (book: ReadingListData) => (addBook ? addBook(book) : null);
+
+  const removeBookId = (id: Id) => (removeBook ? removeBook(id) : null);
 
   return (
     <div className="search-result">
@@ -24,7 +28,11 @@ function SearchResults({ data }: Props) {
           <p>{authors}</p>
         </div>
       </div>
-      <button onClick={() => addBookId(bookData)}>Add to List +</button>
+      {listItems.includes(id) ? (
+        <button onClick={() => removeBookId(id)}>Favorite</button>
+      ) : (
+        <button onClick={() => addBookId(bookData)}>Add to List +</button>
+      )}
     </div>
   );
 }
