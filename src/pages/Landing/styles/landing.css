@@ -1,3 +1,7 @@
+body {
+  color: #130423;
+}
+
 .landing__section {
   display: flex;
   flex-direction: column;
@@ -41,18 +45,18 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #252a34;
-  color: #08d9d6;
+  background: #f2d41e;
+  color: #2ac1ec;
   font-weight: 600;
   width: 150px;
   height: 40px;
   border-radius: 25px;
-  border: 2px solid #252a34;
+  border: 2px solid #f2d41e;
   transition: all ease-out 300ms;
 }
 .landing__text a:hover {
-  background-color: #f0eeee;
-  color: #252a34;
+  background-color: #17dce3;
+  color: #f2d41e;
 }
 
 .button-icon {

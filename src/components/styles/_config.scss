@@ -1,6 +1,13 @@
-$primary-color: #252a34;
-$secondary-color: #08d9d6;
-$default-color: #f0eeee;
+$primary-color: #f2d41e;
+$secondary-color: #2ac1ec;
+$default-color: #17dce3;
+$dream-white: #f6f8f9;
+$dream-black: #130423;
+$dream-blue: #b9dee2;
+
+body {
+  color: $dream-black;
+}
 
 @mixin media-md {
   @media screen and (min-width: 768px) {

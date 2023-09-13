@@ -1,10 +1,14 @@
+body {
+  color: #130423;
+}
+
 .container {
   margin: 0 auto;
   width: 100vw;
   min-width: 320px;
   min-height: 100vh;
-  background: #08d9d6;
-  color: #252a34;
+  background: #2ac1ec;
+  color: #f2d41e;
 }
 
 a {
@@ -26,9 +30,9 @@ li {
   min-height: 90vh;
   border-radius: 0.2rem;
   padding: 4rem 1rem;
-  background: #f0eeee;
-  color: #252a34;
-  box-shadow: 0px 0px 5px 1px #9ea7ba;
+  background: #17dce3;
+  color: #f2d41e;
+  box-shadow: 0px 0px 5px 1px white;
   overflow: hidden;
 }
 
@@ -81,7 +85,7 @@ header {
     transition: all ease-out 300ms;
   }
   .navbar__items a:hover {
-    color: #f0eeee;
+    color: #17dce3;
   }
   .navbar__items a.active {
     text-decoration: underline;
