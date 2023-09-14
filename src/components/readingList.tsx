@@ -15,19 +15,21 @@ function ReadingList() {
             <div className="rl__collection">
               {bookList.map((item) => (
                 <div key={item.id} className="rl__item">
-                  <img src={item.image} alt="Book thumbnail" />
-                  <h2>{item.title}</h2>
-                  <div className="rl__buttons">
-                    <a
-                      href={`${item.previewLink}`}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Preview
-                    </a>
-                    <button onClick={() => removeBookId(item.id)}>
-                      Remove
-                    </button>
+                  <div className="rl__item-wrapper">
+                    <img src={item.image} alt="Book thumbnail" />
+                    <h2>{item.title}</h2>
+                    <div className="rl__buttons">
+                      <a
+                        href={`${item.previewLink}`}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Preview
+                      </a>
+                      <button onClick={() => removeBookId(item.id)}>
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}

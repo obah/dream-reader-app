@@ -61,27 +61,33 @@ body {
 .rl__collection {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
   padding: 1rem 0;
 }
 
 .rl__item {
-  width: 256px;
-  height: 330px;
-  margin: 0 auto 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  border-radius: 20px;
+  background: #f6f8f9;
   padding: 1rem;
-  box-shadow: 0px 0px 4px 3px #cef1fb;
+  margin: 0 0 1rem;
   text-align: center;
-  gap: 0.5rem;
+  border-radius: 2px;
+  border: 1px solid #17dce3;
 }
 .rl__item img {
   width: 120px;
   height: 180px;
+}
+.rl__item-wrapper {
+  width: 256px;
+  height: 330px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px 3px #ccf8fa;
 }
 
 .rl__buttons {
@@ -97,18 +103,19 @@ body {
 }
 .rl__buttons a:hover,
 .rl__buttons button:hover {
-  background: #17dce3;
+  background: #f6f8f9;
+  color: #130423;
 }
 .rl__buttons a {
-  border: 2px #2ac1ec solid;
-  background: #2ac1ec;
-  color: #f2d41e;
+  border: 2px #17dce3 solid;
+  background: #17dce3;
+  color: #f6f8f9;
   font-weight: 600;
 }
 .rl__buttons button {
-  border: 2px red solid;
-  background-color: red;
-  color: #f2d41e;
+  border: 2px #130423 solid;
+  background-color: #130423;
+  color: #f6f8f9;
   font-weight: 500;
 }
 
@@ -179,6 +186,7 @@ body {
   .rl__collection,
   .dashboard__results {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
