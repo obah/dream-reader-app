@@ -20,9 +20,11 @@ function SearchResults({ data }: Props) {
   const removeBookId = (id: Id) => (removeBook ? removeBook(id) : null);
 
   return (
-    <div className="search-result">
-      <div className="search-item">
-        <img src={image} alt="book thumbnail" />
+    <div className="dashboard__results">
+      <div className="dashboard__results-item">
+        <div className="image-wrapper">
+          <img src={image} alt="book thumbnail" />
+        </div>
         <div className="search__text">
           <h2>{title}</h2>
           <p>{authors}</p>

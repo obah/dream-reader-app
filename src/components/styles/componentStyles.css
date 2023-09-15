@@ -86,7 +86,7 @@ header {
     transition: all ease-out 300ms;
   }
   .navbar__menu a:hover {
-    color: #17dce3;
+    color: #2ac1ec;
   }
   .navbar__menu a.active {
     -webkit-text-decoration: underline #2ac1ec 4px;

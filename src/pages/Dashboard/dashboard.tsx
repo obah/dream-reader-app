@@ -18,12 +18,12 @@ export function Dashboard() {
   return (
     <Layout>
       <section className="dashboard__main">
-        <div className="dashboard__text">
+        <div className="dashboard__main-text">
           <h1>Dream Reader</h1>
           <p>Your personal portal to all books on the internet</p>
         </div>
 
-        <div className="dashboard__search">
+        <div className="dashboard__main-search">
           <input
             ref={searchRef}
             type="text"
@@ -35,10 +35,10 @@ export function Dashboard() {
           </button>
         </div>
 
-        <div className="dashboard__results">
+        <div className="results__wrapper">
           {books.length > 0 &&
             books.map((book) => (
-              <div key={book.id}>
+              <div key={book.id} className="results__wrapper-item">
                 <SearchResults data={book} />
               </div>
             ))}

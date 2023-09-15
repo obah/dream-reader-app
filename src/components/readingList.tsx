@@ -16,7 +16,9 @@ function ReadingList() {
               {bookList.map((item) => (
                 <div key={item.id} className="rl__item">
                   <div className="rl__item-wrapper">
-                    <img src={item.image} alt="Book thumbnail" />
+                    <div className="image-wrapper">
+                      <img src={item.image} alt="Book thumbnail" />
+                    </div>
                     <h2>{item.title}</h2>
                     <div className="rl__buttons">
                       <a

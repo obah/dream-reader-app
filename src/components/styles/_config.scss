@@ -9,10 +9,22 @@ body {
   color: $dream-black;
 }
 
+@mixin dream-gradient {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+}
+
+@mixin transistion-ease-300 {
+  transition: all ease-out 300ms;
+}
+
+@mixin btn-border {
+  border-radius: 5px;
+}
+
 @mixin gradient-btn {
   a {
     color: $dream-white;
-    border-radius: 5px;
+    @include btn-border;
     @include dream-gradient;
     @include transistion-ease-300;
   }
@@ -25,33 +37,46 @@ body {
 @mixin primary-btn {
   a {
     color: $dream-white;
-    border-radius: 25px;
     background: $primary-color;
     border: 2px solid $primary-color;
+    @include btn-border;
     @include transistion-ease-300;
+
+    &:hover {
+      background: $dream-white;
+      color: $dream-black;
+    }
   }
+}
 
-  a:hover {
-    background: $dream-white;
-    color: $dream-black;
+@mixin secondary-btn {
+  a,
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    @include btn-border;
+    @include transistion-ease-300;
+
+    &:hover {
+      background: $dream-white;
+      color: $dream-black;
+    }
   }
 }
 
-@mixin add-btn {
-}
+@mixin item-card {
+  background: $dream-white;
+  padding: 1rem;
+  margin: 0 0 1rem;
 
-@mixin remove-btn {
-}
+  border-radius: 2px;
+  border: 1px solid $default-color;
 
-@mixin link-btn {
-}
+  @include transistion-ease-300;
 
-@mixin dream-gradient {
-  background: linear-gradient(to right, $primary-color, $secondary-color);
-}
-
-@mixin transistion-ease-300 {
-  transition: all ease-out 300ms;
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
 }
 
 @mixin media-md {
