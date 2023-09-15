@@ -24,29 +24,35 @@
     input {
       width: 100%;
       padding: 12px 20px;
+      background: linear-gradient(#fff, #fff) padding-box,
+        $gradient-mix border-box;
+      border: 3px solid transparent;
       border-radius: 25px;
-      border: 1px solid $secondary-color;
+    }
+
+    ::placeholder {
+      color: $dream-black;
+      opacity: 1;
     }
 
     .search-icon {
-      position: absolute;
-      top: 5px;
-      right: 5px;
+      @include centered-flex;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute;
+      top: 7px;
+      right: 7px;
 
       border: 1px $secondary-color solid;
       border-radius: 25px;
       padding: 0.5rem;
       background: $primary-color;
       color: $secondary-color;
-      transition: background-color 300ms ease-out;
-    }
+      @include transistion-ease-300;
 
-    .search-icon:hover {
-      background: $default-color;
+      &:hover {
+        background-color: $dream-white;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -187,7 +193,7 @@
     }
 
     &-search {
-      width: 400px;
+      width: 500px;
     }
   }
 
@@ -203,6 +209,12 @@
 }
 
 @include media_lg {
+  .dashboard__main {
+    &-search {
+      width: 600px;
+    }
+  }
+
   .rl__collection,
   .results__wrapper {
     grid-template-columns: 1fr 1fr 1fr;

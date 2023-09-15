@@ -4,13 +4,14 @@ $default-color: #17dce3;
 $dream-white: #f6f8f9;
 $dream-black: #130423;
 $dream-blue: #b9dee2;
+$gradient-mix: linear-gradient(to right, $primary-color, $secondary-color);
 
 body {
   color: $dream-black;
 }
 
 @mixin dream-gradient {
-  background: linear-gradient(to right, $primary-color, $secondary-color);
+  background: $gradient-mix;
 }
 
 @mixin transistion-ease-300 {
