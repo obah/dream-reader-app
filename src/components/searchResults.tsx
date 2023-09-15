@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Id, ReadingListContext } from "../context/readingListContext";
 import { BookData, ReadingListData } from "../types";
 import useIdList from "./hooks/useIdList";
+import { BsBookmarkHeartFill, BsBookmarkPlus } from "react-icons/bs";
 
 type Props = {
   data: BookData;
@@ -29,12 +30,16 @@ function SearchResults({ data }: Props) {
           <h2>{title}</h2>
           <p>{authors}</p>
         </div>
+        {listItems.includes(id) ? (
+          <button onClick={() => removeBookId(id)} className="fav-btn">
+            Favorite <BsBookmarkHeartFill />
+          </button>
+        ) : (
+          <button onClick={() => addBookId(bookData)} className="add-btn">
+            Add to List <BsBookmarkPlus />
+          </button>
+        )}
       </div>
-      {listItems.includes(id) ? (
-        <button onClick={() => removeBookId(id)}>Favorite</button>
-      ) : (
-        <button onClick={() => addBookId(bookData)}>Add to List +</button>
-      )}
     </div>
   );
 }

@@ -26,8 +26,7 @@ li {
   margin: 0 auto;
   min-height: 90vh;
   border-radius: 0.2rem;
-  padding: 4rem 1rem;
-  overflow: hidden;
+  padding: 4rem 0rem;
 }
 
 header {
@@ -108,6 +107,6 @@ header {
 
   .main-body {
     max-width: 1400px;
-    padding: 5rem;
+    padding: 5rem 0;
   }
 }
