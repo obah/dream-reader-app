@@ -8,7 +8,7 @@ export function Landing() {
   return (
     <Layout>
       <section className="landing__section">
-        <div className="landing__text">
+        <div className="landing__section-text">
           <h3>Hello Reader,</h3>
           <h1>
             All your favorite books in one place <br />
@@ -26,7 +26,7 @@ export function Landing() {
           </p>
         </div>
 
-        <div className="landing__image">
+        <div className="landing__section-image">
           <img src={BookShelf} alt="a book shelf" />
         </div>
       </section>

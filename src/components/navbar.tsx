@@ -11,7 +11,7 @@ export function Navbar({ items }: PropsWithChildren<Props>) {
 
   return (
     <>
-      <li key={name}>
+      <li key={name} className="navbar__menu-item">
         <NavLink to={href}>{name}</NavLink>
       </li>
     </>

@@ -9,6 +9,51 @@ body {
   color: $dream-black;
 }
 
+@mixin gradient-btn {
+  a {
+    color: $dream-white;
+    border-radius: 5px;
+    @include dream-gradient;
+    @include transistion-ease-300;
+  }
+
+  a:hover {
+    color: $dream-black;
+  }
+}
+
+@mixin primary-btn {
+  a {
+    color: $dream-white;
+    border-radius: 25px;
+    background: $primary-color;
+    border: 2px solid $primary-color;
+    @include transistion-ease-300;
+  }
+
+  a:hover {
+    background: $dream-white;
+    color: $dream-black;
+  }
+}
+
+@mixin add-btn {
+}
+
+@mixin remove-btn {
+}
+
+@mixin link-btn {
+}
+
+@mixin dream-gradient {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+}
+
+@mixin transistion-ease-300 {
+  transition: all ease-out 300ms;
+}
+
 @mixin media-md {
   @media screen and (min-width: 768px) {
     @content;

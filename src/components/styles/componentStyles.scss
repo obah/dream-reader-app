@@ -27,9 +27,6 @@ li {
   min-height: 90vh;
   border-radius: 0.2rem;
   padding: 4rem 1rem;
-  // background: $dream-white;
-  // color: $primary-color;
-  // box-shadow: 0px 0px 5px 1px lighten($primary-color, 50%);
   overflow: hidden;
 }
 
@@ -44,6 +41,7 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid $dream-blue;
 }
 
 .mobile-nav {
@@ -65,7 +63,7 @@ header {
   border: none;
 }
 
-.navbar__items {
+.navbar__menu {
   display: none;
 }
 
@@ -74,7 +72,12 @@ header {
     display: none;
   }
 
-  .navbar__items {
+  .header__title {
+    border-right: 1px solid $dream-blue;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar__menu {
     display: flex;
     width: 100%;
 
@@ -88,7 +91,12 @@ header {
     }
 
     a.active {
-      text-decoration: underline;
+      text-decoration: underline $secondary-color 4px;
+    }
+
+    &-item {
+      border-left: 1px solid $dream-blue;
+      padding: 0.5rem 0;
     }
   }
 }
