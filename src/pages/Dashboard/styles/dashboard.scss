@@ -218,7 +218,11 @@
   .rl__collection,
   .dashboard__results {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
+  }
+
+  .rl__item {
+    margin: 0 0 0.2rem;
   }
 }
 
