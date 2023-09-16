@@ -192,7 +192,8 @@ body {
   width: 100px;
   height: 150px;
 }
-.dashboard__results-item button {
+.dashboard__results-item button,
+.dashboard__results-item .fav-btn > span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,6 +221,17 @@ body {
 .dashboard__results-item .fav-btn {
   background: #f2d41e;
   color: #130423;
+}
+.dashboard__results-item .fav-btn span:nth-child(2) {
+  display: none;
+}
+.dashboard__results-item .fav-btn:hover span:nth-child(1) {
+  display: none;
+}
+.dashboard__results-item .fav-btn:hover span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dashboard__results-item .add-btn {
   background: #17dce3;

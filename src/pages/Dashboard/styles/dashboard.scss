@@ -139,7 +139,8 @@
       height: 150px;
     }
 
-    button {
+    button,
+    .fav-btn > span {
       @include centered-flex;
       gap: 0.5rem;
     }
@@ -171,6 +172,20 @@
     .fav-btn {
       background: $primary-color;
       color: $dream-black;
+
+      span:nth-child(2) {
+        display: none;
+      }
+
+      &:hover {
+        span:nth-child(1) {
+          display: none;
+        }
+
+        span:nth-child(2) {
+          @include centered-flex;
+        }
+      }
     }
 
     .add-btn {
