@@ -144,6 +144,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 5rem;
+  border-bottom: #f6f8f9 10px;
 }
 .results__wrapper-item {
   background: #f6f8f9;
@@ -240,13 +241,21 @@ body {
 
 @media screen and (min-width: 768px) {
   .dashboard__main-text h1 {
-    font-size: 1.5rem;
+    font-size: 4rem;
+    font-weight: 700;
   }
   .dashboard__main-text p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    margin: 0 0 2.5rem;
   }
   .dashboard__main-search {
     width: 500px;
+  }
+  .reading-list h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: left;
+    margin: 4rem 0 3rem;
   }
   .rl__collection,
   .results__wrapper {
