@@ -25,8 +25,18 @@ function SearchResults({ data }: Props) {
 
   const removeBookId = (id: Id) => (removeBook ? removeBook(id) : null);
 
+  const itemVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+      },
+    },
+  };
+
   return (
-    <div className="dashboard__results">
+    <motion.div className="dashboard__results" variants={itemVariants}>
       <motion.div
         className="dashboard__results-item"
         whileHover={{ scale: 1.05 }}
@@ -53,7 +63,7 @@ function SearchResults({ data }: Props) {
           </button>
         )}
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 

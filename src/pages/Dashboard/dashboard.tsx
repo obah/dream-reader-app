@@ -5,6 +5,7 @@ import SearchResults from "../../components/searchResults";
 import ReadingList from "../../components/readingList";
 import { BsSearch } from "react-icons/bs";
 import { FaRegCircleXmark } from "react-icons/fa6";
+import { motion } from "framer-motion";
 import "./styles/dashboard.css";
 
 export function Dashboard() {
@@ -25,6 +26,16 @@ export function Dashboard() {
   const clearSearchResult = () => {
     clearBooks ? clearBooks() : null;
     scrollToTop(sectionRef);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   return (
@@ -49,13 +60,18 @@ export function Dashboard() {
 
         {books.length > 0 && (
           <div className="dashboard__main-results">
-            <div className="results__wrapper">
+            <motion.div
+              className="results__wrapper"
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+            >
               {books.map((book) => (
                 <div key={book.id} className="results__wrapper-item">
                   <SearchResults data={book} />
                 </div>
               ))}
-            </div>
+            </motion.div>
 
             <div className="clearSearch-btn">
               <button onClick={clearSearchResult}>
