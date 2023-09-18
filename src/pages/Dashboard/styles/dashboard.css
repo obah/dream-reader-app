@@ -81,9 +81,6 @@ body {
   margin: 0 0 1rem;
   transition: all ease-out 300ms;
 }
-.rl__item:hover {
-  transform: translateY(-0.3rem);
-}
 @media screen and (min-width: 768px) {
   .rl__item {
     padding: 1rem;
@@ -151,9 +148,6 @@ body {
   padding: 0.5rem;
   margin: 0 0 1rem;
   transition: all ease-out 300ms;
-}
-.results__wrapper-item:hover {
-  transform: translateY(-0.3rem);
 }
 @media screen and (min-width: 768px) {
   .results__wrapper-item {

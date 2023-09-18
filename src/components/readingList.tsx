@@ -47,7 +47,10 @@ function ReadingList() {
                   className="rl__item"
                   variants={itemVariants}
                 >
-                  <div className="rl__item-wrapper">
+                  <motion.div
+                    className="rl__item-wrapper"
+                    whileHover={{ scale: 1.05 }}
+                  >
                     <div className="image-wrapper">
                       <img src={item.image} alt="Book thumbnail" />
                     </div>
@@ -64,7 +67,7 @@ function ReadingList() {
                         Remove
                       </button>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </motion.div>

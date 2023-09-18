@@ -79,14 +79,7 @@ body {
   padding: 0.5rem;
   margin: 0 0 1rem;
 
-  // border-radius: 2px;
-  // border: 1px solid $default-color;
-
   @include transistion-ease-300;
-
-  &:hover {
-    transform: translateY(-0.3rem);
-  }
 
   @include media-md {
     padding: 1rem;

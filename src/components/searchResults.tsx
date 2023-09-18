@@ -7,6 +7,7 @@ import {
   BsBookmarkPlus,
   BsBookmarkX,
 } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 type Props = {
   data: BookData;
@@ -26,7 +27,10 @@ function SearchResults({ data }: Props) {
 
   return (
     <div className="dashboard__results">
-      <div className="dashboard__results-item">
+      <motion.div
+        className="dashboard__results-item"
+        whileHover={{ scale: 1.05 }}
+      >
         <div className="image-wrapper">
           <img src={image} alt="book thumbnail" />
         </div>
@@ -48,7 +52,7 @@ function SearchResults({ data }: Props) {
             Add to List <BsBookmarkPlus />
           </button>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }
