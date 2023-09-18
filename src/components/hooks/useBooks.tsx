@@ -26,12 +26,17 @@ function useBooks() {
     }
   };
 
+  const clearBooks = () => {
+    setSearchQuery("");
+    setBooks([]);
+  };
+
   useEffect(() => {
     getBooks();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery]);
 
-  return { books, setSearchQuery };
+  return { books, setSearchQuery, clearBooks };
 }
 
 export default useBooks;

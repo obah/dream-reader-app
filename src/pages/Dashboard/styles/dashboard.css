@@ -54,6 +54,9 @@ body {
   background-color: #f6f8f9;
   cursor: pointer;
 }
+.dashboard__main-results {
+  margin-bottom: 10rem;
+}
 
 .reading-list h1 {
   text-align: center;
@@ -140,7 +143,7 @@ body {
 .results__wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   border-bottom: #f6f8f9 10px;
 }
 .results__wrapper-item {
@@ -233,6 +236,34 @@ body {
   color: #130423;
 }
 
+.clearSearch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clearSearch-btn a,
+.clearSearch-btn button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 5px;
+  transition: all ease-out 300ms;
+}
+.clearSearch-btn a:hover,
+.clearSearch-btn button:hover {
+  background: #f6f8f9;
+  color: #130423;
+  cursor: pointer;
+}
+.clearSearch-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: #130423;
+  color: #f6f8f9;
+}
+
 @media screen and (min-width: 768px) {
   .dashboard__main-text h1 {
     font-size: 4rem;
@@ -244,6 +275,9 @@ body {
   }
   .dashboard__main-search {
     width: 500px;
+  }
+  .dashboard__main-results {
+    margin-bottom: 5rem;
   }
   .reading-list h1 {
     font-size: 3.5rem;
@@ -261,11 +295,17 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .dashboard__main-text h1 {
+    font-size: 5rem;
+  }
   .dashboard__main-search {
     width: 600px;
   }
   .rl__collection,
   .results__wrapper {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .reading-list h1 {
+    font-size: 5rem;
   }
 }/*# sourceMappingURL=dashboard.css.map */
