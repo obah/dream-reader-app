@@ -1,27 +1,12 @@
 import { useContext } from "react";
 import { Id, ReadingListContext } from "../context/readingListContext";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import StaggeredAnimation from "./staggeredAnimation";
 
 function ReadingList() {
   const { bookList, removeBook } = useContext(ReadingListContext);
 
   const removeBookId = (id: Id) => (removeBook ? removeBook(id) : null);
-
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
   const itemVariants = {
     hidden: { opacity: 0, transform: "translateY(100px)" },
@@ -34,13 +19,7 @@ function ReadingList() {
       <div>
         <div>
           {bookList && (
-            <motion.div
-              className="rl__collection"
-              ref={ref}
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "show" : "hidden"}
-            >
+            <StaggeredAnimation classname="rl__collection">
               {bookList.map((item) => (
                 <motion.div
                   key={item.id}
@@ -54,6 +33,7 @@ function ReadingList() {
                     <div className="image-wrapper">
                       <img src={item.image} alt="Book thumbnail" />
                     </div>
+
                     <h2>{item.title}</h2>
                     <div className="rl__buttons">
                       <a
@@ -70,7 +50,7 @@ function ReadingList() {
                   </motion.div>
                 </motion.div>
               ))}
-            </motion.div>
+            </StaggeredAnimation>
           )}
         </div>
 

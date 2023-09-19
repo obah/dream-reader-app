@@ -7,6 +7,7 @@ import { BsSearch } from "react-icons/bs";
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import "./styles/dashboard.css";
+import RecommendedBooks from "../../components/recommendedBooks";
 
 export function Dashboard() {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -80,6 +81,10 @@ export function Dashboard() {
             </div>
           </div>
         )}
+      </section>
+
+      <section className="recommended__section">
+        <RecommendedBooks />
       </section>
 
       <section className="reading-list">

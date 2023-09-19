@@ -66,11 +66,12 @@
     text-align: center;
     margin-bottom: 1rem;
   }
-
+  /////////////////////////////////////////////// delete
   h2 {
     height: 60px;
     font-size: 1rem;
   }
+  ///////////////////////////////////////////////
 
   p {
     font-size: 0.8rem;
@@ -210,6 +211,25 @@
 
     background: $dream-black;
     color: $dream-white;
+  }
+}
+
+.recommended__section {
+  width: 100%;
+  height: 40%;
+  margin-top: 5rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: scroll;
   }
 }
 
