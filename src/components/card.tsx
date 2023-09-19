@@ -43,7 +43,9 @@ function Card({ data, role, favorite }: ICardProps) {
           <img src={image} alt="book thumbnail" />
         </div>
         <div className="card__wrapper-text">
-          <h2 className={role === "default" ? "clamped-title" : ""}>{title}</h2>
+          <h2 className={role === "default" ? "clamped-title" : "full-title"}>
+            {title}
+          </h2>
           {role === "default" && <p>{authors}</p>}
         </div>
         <div className="card__wrapper-buttons">

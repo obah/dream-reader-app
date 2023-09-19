@@ -106,6 +106,10 @@ header {
   font-size: 0.9rem;
   font-weight: 400;
 }
+.card__wrapper-text .full-title {
+  height: 60px;
+  font-size: 1rem;
+}
 .card__wrapper-buttons .default-btns a,
 .card__wrapper-buttons .default-btns button {
   padding: 0.4rem 0.8rem;

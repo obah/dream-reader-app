@@ -1,17 +1,10 @@
 import { useContext } from "react";
-import { Id, ReadingListContext } from "../context/readingListContext";
-import { motion } from "framer-motion";
+import { ReadingListContext } from "../context/readingListContext";
 import StaggeredAnimation from "./staggeredAnimation";
+import Card from "./card";
 
 function ReadingList() {
-  const { bookList, removeBook } = useContext(ReadingListContext);
-
-  const removeBookId = (id: Id) => (removeBook ? removeBook(id) : null);
-
-  const itemVariants = {
-    hidden: { opacity: 0, transform: "translateY(100px)" },
-    show: { opacity: 1, transform: "none" },
-  };
+  const { bookList } = useContext(ReadingListContext);
 
   return (
     <>
@@ -21,34 +14,7 @@ function ReadingList() {
           {bookList && (
             <StaggeredAnimation classname="rl__collection">
               {bookList.map((item) => (
-                <motion.div
-                  key={item.id}
-                  className="rl__item"
-                  variants={itemVariants}
-                >
-                  <motion.div
-                    className="rl__item-wrapper"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="image-wrapper">
-                      <img src={item.image} alt="Book thumbnail" />
-                    </div>
-
-                    <h2>{item.title}</h2>
-                    <div className="rl__buttons">
-                      <a
-                        href={`${item.previewLink}`}
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        Preview
-                      </a>
-                      <button onClick={() => removeBookId(item.id)}>
-                        Remove
-                      </button>
-                    </div>
-                  </motion.div>
-                </motion.div>
+                <Card data={item} role="favorites" key={item.id} />
               ))}
             </StaggeredAnimation>
           )}

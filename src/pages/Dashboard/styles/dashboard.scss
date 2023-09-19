@@ -66,12 +66,6 @@
     text-align: center;
     margin-bottom: 1rem;
   }
-  /////////////////////////////////////////////// delete
-  h2 {
-    height: 60px;
-    font-size: 1rem;
-  }
-  ///////////////////////////////////////////////
 
   p {
     font-size: 0.8rem;
@@ -87,118 +81,10 @@
   padding: 1rem 0;
 }
 
-.rl__item {
-  @include item-card;
-
-  img,
-  .image-wrapper {
-    width: 120px;
-    height: 180px;
-  }
-
-  &-wrapper {
-    @include item-inner-card;
-    height: 330px;
-  }
-}
-
-.rl__buttons {
-  display: flex;
-  gap: 1rem;
-  @include secondary-btn;
-
-  a {
-    border: 2px $default-color solid;
-    background: $default-color;
-    color: $dream-white;
-    font-weight: 600;
-  }
-
-  button {
-    border: 2px $dream-black solid;
-    background-color: $dream-black;
-    color: $dream-white;
-    font-weight: 500;
-  }
-}
-
 .results__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 1rem;
-  border-bottom: $dream-white 10px;
-
-  &-item {
-    @include item-card;
-  }
-}
-
-.dashboard__results {
-  @include secondary-btn;
-
-  &-item {
-    @include item-inner-card;
-
-    img,
-    .image-wrapper {
-      width: 100px;
-      height: 150px;
-    }
-
-    button,
-    .fav-btn > span {
-      @include centered-flex;
-      gap: 0.5rem;
-    }
-
-    .search__text {
-      h2,
-      p {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        width: 100%;
-        padding: 0.5rem;
-      }
-
-      h2 {
-        height: 50px;
-        font-size: 1rem;
-        font-weight: 500;
-      }
-
-      p {
-        height: 30px;
-        font-size: 0.9rem;
-        font-weight: 400;
-      }
-    }
-
-    .fav-btn {
-      background: $primary-color;
-      color: $dream-black;
-
-      span:nth-child(2) {
-        display: none;
-      }
-
-      &:hover {
-        span:nth-child(1) {
-          display: none;
-        }
-
-        span:nth-child(2) {
-          @include centered-flex;
-        }
-      }
-    }
-
-    .add-btn {
-      background: $default-color;
-      color: $dream-black;
-    }
-  }
 }
 
 .clearSearch-btn {
@@ -269,10 +155,6 @@
   .results__wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-  }
-
-  .rl__item {
-    margin: 0 0 0.2rem;
   }
 }
 
