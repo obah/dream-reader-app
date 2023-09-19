@@ -103,10 +103,9 @@
 .recommended__section {
   width: 100%;
   height: 40%;
-  margin-top: 5rem;
+  margin: 5rem 0;
 
   h1 {
-    font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -156,6 +155,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }
+
+  .recommended__section {
+    margin: 5rem 0 10rem;
+
+    h1 {
+      font-size: 3rem;
+      text-align: left;
+    }
+  }
 }
 
 @include media_lg {
@@ -176,7 +184,8 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .reading-list {
+  .reading-list,
+  .recommended__section {
     h1 {
       font-size: 5rem;
     }
