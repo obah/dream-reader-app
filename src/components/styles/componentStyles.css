@@ -68,6 +68,43 @@ header {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .header__title {
+    border-right: 1px solid #b9dee2;
+    padding: 0.5rem 1rem;
+  }
+  .navbar__menu {
+    display: flex;
+    width: 100%;
+  }
+  .navbar__menu a {
+    padding: 0.5rem 1rem;
+    transition: all ease-out 300ms;
+  }
+  .navbar__menu a:hover {
+    color: #2ac1ec;
+  }
+  .navbar__menu a.active {
+    -webkit-text-decoration: underline #2ac1ec 4px;
+            text-decoration: underline #2ac1ec 4px;
+  }
+  .navbar__menu-item {
+    border-left: 1px solid #b9dee2;
+    padding: 0.5rem 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__container {
+    max-width: 1440px;
+  }
+  .main-body {
+    max-width: 1400px;
+    padding: 5rem 0;
+  }
+}
 .card {
   background: #f6f8f9;
   padding: 0.5rem;
@@ -195,42 +232,7 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  .mobile-nav {
-    display: none;
-  }
-  .header__title {
-    border-right: 1px solid #b9dee2;
-    padding: 0.5rem 1rem;
-  }
-  .navbar__menu {
-    display: flex;
-    width: 100%;
-  }
-  .navbar__menu a {
-    padding: 0.5rem 1rem;
-    transition: all ease-out 300ms;
-  }
-  .navbar__menu a:hover {
-    color: #2ac1ec;
-  }
-  .navbar__menu a.active {
-    -webkit-text-decoration: underline #2ac1ec 4px;
-            text-decoration: underline #2ac1ec 4px;
-  }
-  .navbar__menu-item {
-    border-left: 1px solid #b9dee2;
-    padding: 0.5rem 0;
-  }
   .card {
     padding: 1rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .header__container {
-    max-width: 1440px;
-  }
-  .main-body {
-    max-width: 1400px;
-    padding: 5rem 0;
   }
 }/*# sourceMappingURL=componentStyles.css.map */

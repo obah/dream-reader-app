@@ -173,4 +173,21 @@ body {
   .recommended__section h1 {
     font-size: 5rem;
   }
+  .recommended__section-items::-webkit-scrollbar {
+    height: 7px;
+  }
+  .recommended__section-items::-webkit-scrollbar-track {
+    background-color: #f6f8f9;
+    border-radius: 10px;
+  }
+  .recommended__section-items::-webkit-scrollbar-track:hover {
+    background-color: #edf1f3;
+  }
+  .recommended__section-items::-webkit-scrollbar-thumb {
+    background-color: #b9dee2;
+    border-radius: 10px;
+  }
+  .recommended__section-items::-webkit-scrollbar-thumb:hover {
+    background-color: #95cdd3;
+  }
 }/*# sourceMappingURL=dashboard.css.map */

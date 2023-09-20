@@ -1,0 +1,112 @@
+@import "config";
+
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited,
+a:active {
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+.main-body {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 90vh;
+  border-radius: 0.2rem;
+  padding: 4rem 0rem;
+}
+
+header {
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.header__container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $dream-blue;
+}
+
+.mobile-nav {
+  position: relative;
+  width: 1.5rem;
+  height: 2px;
+  background-color: red;
+  border: none;
+}
+
+.mobile-nav::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 1.5rem;
+  height: 2px;
+  background-color: red;
+  border: none;
+}
+
+.navbar__menu {
+  display: none;
+}
+
+@include media-md {
+  .mobile-nav {
+    display: none;
+  }
+
+  .header__title {
+    border-right: 1px solid $dream-blue;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar__menu {
+    display: flex;
+    width: 100%;
+
+    a {
+      padding: 0.5rem 1rem;
+      transition: all ease-out 300ms;
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
+
+    a.active {
+      text-decoration: underline $secondary-color 4px;
+    }
+
+    &-item {
+      border-left: 1px solid $dream-blue;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+@include media-lg {
+  .header__container {
+    max-width: 1440px;
+  }
+
+  .main-body {
+    max-width: 1400px;
+    padding: 5rem 0;
+  }
+}

@@ -190,4 +190,10 @@
       font-size: 5rem;
     }
   }
+
+  .recommended__section {
+    &-items {
+      @include custom-scrollbar;
+    }
+  }
 }
