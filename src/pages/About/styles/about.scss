@@ -1,14 +1,53 @@
 @import "../../../components/styles/config";
 .about__section {
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
+  margin: -4rem auto 0;
+
+  text-align: left;
 
   h1 {
-    text-align: center;
     margin-bottom: 2rem;
+    color: $primary-color;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    background-color: $default-color;
+  }
+
+  &-top-text {
+    margin-bottom: 5rem;
+
+    a {
+      color: $secondary-color;
+    }
+  }
+
+  &-image {
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+    }
   }
 }
 
-.about__top-text {
-  margin-bottom: 5rem;
+@include media-md {
+  .about__section {
+    &-image {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+@include media-lg {
+  .about__section {
+    &-top-text,
+    &-final-text {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
 }
