@@ -1,4 +1,6 @@
 @import "../../../components/styles/config";
+@import "recommendedSection";
+@import "readingList";
 
 .dashboard__main {
   display: flex;
@@ -74,13 +76,6 @@
   }
 }
 
-.rl__collection {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  padding: 1rem 0;
-}
-
 .results__wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,24 +92,6 @@
 
     background: $dream-black;
     color: $dream-white;
-  }
-}
-
-.recommended__section {
-  width: 100%;
-  height: 40%;
-  margin: 5rem 0;
-
-  h1 {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  &-items {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    overflow-x: scroll;
   }
 }
 
@@ -150,19 +127,9 @@
     }
   }
 
-  .rl__collection,
   .results__wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-  }
-
-  .recommended__section {
-    margin: 5rem 0 10rem;
-
-    h1 {
-      font-size: 3rem;
-      text-align: left;
-    }
   }
 }
 
@@ -179,21 +146,13 @@
     }
   }
 
-  .rl__collection,
   .results__wrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .reading-list,
-  .recommended__section {
+  .reading-list {
     h1 {
       font-size: 5rem;
-    }
-  }
-
-  .recommended__section {
-    &-items {
-      @include custom-scrollbar;
     }
   }
 }

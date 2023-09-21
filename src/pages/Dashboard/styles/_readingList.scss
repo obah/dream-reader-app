@@ -1,0 +1,21 @@
+@import "../../../components/styles/config";
+
+.rl__collection {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  padding: 1rem 0;
+}
+
+@include media-md {
+  .rl__collection {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@include media-lg {
+  .rl__collection {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

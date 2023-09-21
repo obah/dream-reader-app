@@ -2,7 +2,6 @@
 
 .container {
   margin: 0 auto;
-  width: 100vw;
   min-width: 320px;
   min-height: 100vh;
   background: #fff;
@@ -25,7 +24,6 @@ li {
   width: 90%;
   margin: 0 auto;
   min-height: 90vh;
-  border-radius: 0.2rem;
   padding: 4rem 0rem;
 }
 
@@ -101,12 +99,17 @@ header {
 }
 
 @include media-lg {
+  .main-body {
+    padding: 5rem 0;
+  }
+}
+
+@include media-xl {
   .header__container {
     max-width: 1440px;
   }
 
   .main-body {
     max-width: 1400px;
-    padding: 5rem 0;
   }
 }
