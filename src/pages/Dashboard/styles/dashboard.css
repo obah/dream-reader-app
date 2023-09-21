@@ -10,8 +10,10 @@ body {
   width: 100%;
   margin: 5rem 0;
   padding: 2rem 0;
+  background: #b9dee2;
 }
 .recommended__section h1 {
+  color: #f6f8f9;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -20,6 +22,12 @@ body {
   align-items: center;
   gap: 1rem;
   overflow-x: scroll;
+}
+
+.full-background {
+  box-shadow: 0 0 0 100vmax #b9dee2;
+  -webkit-clip-path: inset(0 -100vmax);
+          clip-path: inset(0 -100vmax);
 }
 
 @media screen and (min-width: 768px) {

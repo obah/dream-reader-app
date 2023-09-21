@@ -83,7 +83,7 @@ export function Dashboard() {
         )}
       </section>
 
-      <section className="recommended__section">
+      <section className="recommended__section full-background">
         <RecommendedBooks />
       </section>
 

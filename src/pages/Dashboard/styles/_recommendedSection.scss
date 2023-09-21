@@ -2,13 +2,13 @@
 
 .recommended__section {
   width: 100%;
-  // height: 50%;
   margin: 5rem 0;
   padding: 2rem 0;
-  // overflow: hidden;
-  //   border: 1px red solid; //-testing
+
+  background: $dream-blue;
 
   h1 {
+    color: $dream-white;
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -19,6 +19,11 @@
     gap: 1rem;
     overflow-x: scroll;
   }
+}
+
+.full-background {
+  box-shadow: 0 0 0 100vmax $dream-blue;
+  clip-path: inset(0 -100vmax);
 }
 
 @include media-md {

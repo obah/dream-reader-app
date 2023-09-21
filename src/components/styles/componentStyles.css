@@ -89,7 +89,7 @@ li {
 }
 
 .main-body {
-  width: 90%;
+  width: calc(100vw - 3rem);
   margin: 0 auto;
   min-height: 90vh;
   padding: 4rem 0rem;
