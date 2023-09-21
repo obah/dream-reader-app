@@ -1,0 +1,76 @@
+@import "config";
+
+.header__container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $dream-blue;
+}
+
+.navbar {
+  &-mobile {
+    position: relative;
+    width: 1.5rem;
+    height: 2px;
+    background-color: red;
+    border: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 1.5rem;
+      height: 2px;
+      background-color: red;
+      border: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+  }
+}
+
+@include media-md {
+  .navbar {
+    &-mobile {
+      display: none;
+    }
+
+    &__menu {
+      display: flex;
+      width: 100%;
+
+      a {
+        padding: 0.5rem 1rem;
+        transition: all ease-out 300ms;
+      }
+
+      a:hover {
+        color: $secondary-color;
+      }
+
+      a.active {
+        text-decoration: underline $secondary-color 4px;
+      }
+
+      &-item {
+        border-left: 1px solid $dream-blue;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  .header__container-title {
+    border-right: 1px solid $dream-blue;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@include media-xl {
+  .header__container {
+    max-width: 1440px;
+  }
+}

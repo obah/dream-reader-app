@@ -13,11 +13,11 @@ export function Header() {
   return (
     <header>
       <div className="header__container">
-        <div className="header__title">
+        <div className="header__container-title">
           <NavLink to="/">Dream Reader</NavLink>
         </div>
         <nav className="navbar">
-          <button className="mobile-nav"></button>
+          <button className="navbar-mobile"></button>
           <ul className="navbar__menu">
             {navItems.map((item) => (
               <Navbar key={item.name} items={item} />
