@@ -18,7 +18,7 @@ function StaggeredAnimation({ children, classname }: PropsWithChildren<Props>) {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
