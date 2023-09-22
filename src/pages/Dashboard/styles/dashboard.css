@@ -54,7 +54,7 @@ body {
     background-color: #edf1f3;
   }
   .recommended__section-items::-webkit-scrollbar-thumb {
-    background-color: #b9dee2;
+    background-color: #aed9de;
     border-radius: 10px;
   }
   .recommended__section-items::-webkit-scrollbar-thumb:hover {
