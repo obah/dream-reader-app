@@ -20,7 +20,7 @@ body {
 }
 .menu-btn__burger {
   position: absolute;
-  top: 0.7rem;
+  top: 0.5rem;
   right: 0.4rem;
   width: 30px;
   height: 2px;
@@ -75,7 +75,7 @@ body {
   text-transform: uppercase;
   padding: 2rem 0;
   transform: translateX(200%);
-  transition: transform 500ms ease-in;
+  transition: all 500ms ease-in;
 }
 .navbar__menu.open {
   transform: translateX(0);

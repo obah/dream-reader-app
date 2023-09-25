@@ -8,7 +8,7 @@ body {
   gap: 1.5rem;
 }
 .landing__section-image {
-  height: 30vh;
+  height: 40vh;
 }
 .landing__section-image img {
   -o-object-fit: contain;
@@ -25,22 +25,29 @@ body {
 }
 .landing__section-text a {
   color: #f6f8f9;
+  background-image: linear-gradient(to right, #f2d41e, #2ac1ec);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 1s;
   border-radius: 5px;
-  background: linear-gradient(to right, #f2d41e, #2ac1ec);
-  transition: all ease-out 300ms;
 }
 .landing__section-text a:hover {
-  color: #130423;
-  filter: brightness(90%);
+  background-position: right;
 }
 .landing__section-text h1 {
   font-size: 1.4rem;
   font-weight: 700;
 }
 .landing__section-text h1 span {
-  color: #f2d41e;
+  color: transparent;
   -webkit-text-decoration: underline #2ac1ec 5px;
           text-decoration: underline #2ac1ec 5px;
+  font-size: 1.8rem;
+  background-image: linear-gradient(to right, #f2d41e, #2ac1ec);
+  background-size: 350%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: gradient-animation 10s infinite alternate;
 }
 .landing__section-text h3 {
   font-size: 0.7rem;
@@ -71,7 +78,7 @@ body {
     flex-direction: row;
   }
   .landing__section-image {
-    height: 70vh;
+    height: 60vh;
     width: 80%;
   }
   .landing__section-image img {
@@ -87,6 +94,9 @@ body {
   }
   .landing__section-text h1 {
     font-size: 1.6rem;
+  }
+  .landing__section-text h1 span {
+    font-size: 2rem;
   }
   .landing__section-text h3 {
     font-size: 0.9rem;
@@ -107,10 +117,25 @@ body {
   .landing__section-text h1 {
     font-size: 1.8rem;
   }
+  .landing__section-text h1 span {
+    font-size: 2.2rem;
+  }
   .landing__section-text h3 {
     font-size: 1.1rem;
   }
   .landing__section-text p {
     font-size: 1.2rem;
+  }
+  .landing__section-image {
+    height: 90vh;
+    width: 100%;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
   }
 }/*# sourceMappingURL=landing.css.map */

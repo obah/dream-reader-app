@@ -31,14 +31,17 @@ body {
 @mixin gradient-btn {
   a {
     color: $dream-white;
+    background-image: $gradient-mix;
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 1s;
     @include btn-border;
-    @include dream-gradient;
-    @include transistion-ease-300;
   }
 
   a:hover {
-    color: $dream-black;
-    filter: brightness(90%);
+    // color: $dream-black;
+    // filter: brightness(90%);
+    background-position: right;
   }
 }
 
@@ -90,6 +93,7 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background-color: darken($dream-blue, 3);
+    border: 1px solid $dream-white;
     border-radius: 10px;
 
     &:hover {
