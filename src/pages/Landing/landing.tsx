@@ -1,6 +1,6 @@
 import { Layout } from "../../components/layout";
 import { RxArrowTopRight } from "react-icons/rx";
-import BookShelf from "../../assets/images/book3.png";
+import BookShelf from "../../assets/images/book_shelf.png";
 import "./styles/landing.css";
 import { Link } from "react-router-dom";
 
