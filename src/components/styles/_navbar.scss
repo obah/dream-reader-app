@@ -6,6 +6,14 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $dream-blue;
+
+  &-title {
+    height: 25px;
+    img {
+      height: 100%;
+      transform: translateY(-15%);
+    }
+  }
 }
 
 .menu-btn {
@@ -107,6 +115,14 @@
 }
 
 @include media-md {
+  .header__container-title {
+    height: 42px;
+    img {
+      height: 100%;
+      transform: translateY(0);
+    }
+  }
+
   .navbar {
     position: static;
     visibility: visible;

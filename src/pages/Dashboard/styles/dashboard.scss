@@ -26,10 +26,16 @@
     input {
       width: 100%;
       padding: 12px 20px;
+      background-color: $dream-white;
       background: linear-gradient(#fff, #fff) padding-box,
         $gradient-mix border-box;
       border: 3px solid transparent;
       border-radius: 25px;
+      outline: none;
+
+      &:focus {
+        background-color: #fff;
+      }
     }
 
     ::placeholder {

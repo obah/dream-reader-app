@@ -47,7 +47,11 @@ footer {
   align-items: center;
 
   &-logo {
-    width: 30%;
+    width: auto;
+    height: 30px;
+    img {
+      height: 100%;
+    }
   }
 
   &-text {

@@ -13,6 +13,13 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #b9dee2;
 }
+.header__container-title {
+  height: 25px;
+}
+.header__container-title img {
+  height: 100%;
+  transform: translateY(-15%);
+}
 
 .menu-btn {
   position: relative;
@@ -97,6 +104,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .header__container-title {
+    height: 42px;
+  }
+  .header__container-title img {
+    height: 100%;
+    transform: translateY(0);
+  }
   .navbar {
     position: static;
     visibility: visible;
@@ -189,7 +203,11 @@ footer {
   align-items: center;
 }
 .footer__container-logo {
-  width: 30%;
+  width: auto;
+  height: 30px;
+}
+.footer__container-logo img {
+  height: 100%;
 }
 .footer__container-text {
   width: 70%;

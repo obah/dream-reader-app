@@ -3,6 +3,7 @@ import { INavItems } from "../types";
 import { Navbar } from "./navbar";
 import "./styles/componentStyles.css";
 import { useState } from "react";
+import Logo from "../assets/images/logo_text.png";
 
 type Styles = string;
 
@@ -24,7 +25,9 @@ export function Header() {
     <header>
       <div className="header__container">
         <div className="header__container-title">
-          <NavLink to="/">Dream Reader</NavLink>
+          <NavLink to="/">
+            <img src={Logo} alt="dream reader" />
+          </NavLink>
         </div>
         <div>
           <div className="menu-btn">

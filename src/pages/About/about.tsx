@@ -1,5 +1,5 @@
 import { Layout } from "../../components/layout";
-import AboutImage from "../../assets/images/about-flare.png";
+import AboutImage from "../../assets/images/full_logo.png";
 import "./styles/about.css";
 
 export function About() {
@@ -7,7 +7,7 @@ export function About() {
     <Layout>
       <section className="about__section">
         <div className="about__section-image">
-          <img src={AboutImage} alt="dream reader logo" />
+          <img src={AboutImage} alt="dream reader illustration" />
         </div>
         <div className="about__section-top-text">
           <h1>What is Dream Reader?</h1>

@@ -10,6 +10,7 @@ body {
 .about__section h1 {
   margin-bottom: 2rem;
   color: #f2d41e;
+  font-size: 1.4rem;
 }
 .about__section p {
   margin-bottom: 1rem;
@@ -32,12 +33,19 @@ body {
 
 @media screen and (min-width: 768px) {
   .about__section-image {
+    height: 200px;
     margin-bottom: 5rem;
+  }
+  .about__section-image img {
+    height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
   .about__section-top-text, .about__section-final-text {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+  .about__section-image {
+    height: 400px;
   }
 }/*# sourceMappingURL=about.css.map */

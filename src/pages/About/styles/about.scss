@@ -8,6 +8,7 @@
   h1 {
     margin-bottom: 2rem;
     color: $primary-color;
+    font-size: 1.4rem;
   }
 
   p {
@@ -37,7 +38,12 @@
 @include media-md {
   .about__section {
     &-image {
+      height: 200px;
       margin-bottom: 5rem;
+
+      img {
+        height: 100%;
+      }
     }
   }
 }
@@ -48,6 +54,10 @@
     &-final-text {
       display: grid;
       grid-template-columns: 1fr 2fr;
+    }
+
+    &-image {
+      height: 400px;
     }
   }
 }
