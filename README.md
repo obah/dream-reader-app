@@ -1,27 +1,24 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project allows users to have access to their favorite books and keep track of the books they are currently reading, using the [Google Books API](https://developers.google.com/books).
 
-Currently, two official plugins are available:
+It was built using: React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to use
 
-## Expanding the ESLint configuration
+- Navigate to the dashboard page
+- Search for your book
+- Add it to your reading list
+- From the reading list, you can preview it or get a free copy if it's available on the Google Books Library
+- Books in your reading list are stored in local storage, so no need to create an account or worrying about losing your list if you leave the website. You can choose to remove a book from your reading list anytime
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tools Used
 
-- Configure the top-level `parserOptions` property like this:
+- React + Vite
+- Typescript
+- SASS
+- Framer motion
+- Google books API
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Feel free to go through it and play around with it.
+If you have any questions or suggestions for improvement, feel free to let me know. Cheers
