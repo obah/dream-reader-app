@@ -83,12 +83,8 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    background-color: $dream-white;
+    background-color: transparent;
     border-radius: 10px;
-
-    &:hover {
-      background-color: darken($dream-white, 3);
-    }
   }
 
   &::-webkit-scrollbar-thumb {
@@ -100,6 +96,14 @@ body {
       background-color: darken($dream-blue, 10);
     }
   }
+}
+
+@mixin gradient-text {
+  color: transparent;
+  background-image: $gradient-mix;
+  background-size: 350%;
+  background-clip: text;
+  animation: gradient-animation 12s infinite alternate;
 }
 
 @mixin media-md {
@@ -117,5 +121,14 @@ body {
 @mixin media-xl {
   @media screen and (min-width: 1440px) {
     @content;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
   }
 }

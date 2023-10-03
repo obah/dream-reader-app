@@ -2,10 +2,26 @@ body {
   color: #130423;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 body {
   color: #130423;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 .recommended__section {
   width: 100%;
   margin: 5rem 0;
@@ -47,11 +63,8 @@ body {
     height: 7px;
   }
   .recommended__section-items::-webkit-scrollbar-track {
-    background-color: #f6f8f9;
+    background-color: transparent;
     border-radius: 10px;
-  }
-  .recommended__section-items::-webkit-scrollbar-track:hover {
-    background-color: #edf1f3;
   }
   .recommended__section-items::-webkit-scrollbar-thumb {
     background-color: #aed9de;
@@ -71,6 +84,14 @@ body {
   color: #130423;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 .rl__collection {
   display: grid;
   grid-template-columns: 1fr;

@@ -2,10 +2,26 @@ body {
   color: #130423;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 body {
   color: #130423;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 .header__container {
   width: 100%;
   margin: 0 auto;
