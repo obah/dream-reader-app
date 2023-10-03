@@ -1,7 +1,7 @@
 @import "../../../components/styles/config";
 
 .landing__section {
-  &-text {
+  &-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@
 
 @include media-md {
   .landing__section {
-    &-text {
+    &-hero {
       width: 100%;
       padding: 0 3rem;
 
@@ -78,7 +78,7 @@
 
 @include media-lg {
   .landing__section {
-    &-text {
+    &-hero {
       h1 {
         font-size: 2.5rem;
 

@@ -10,7 +10,7 @@ body {
     background-position: right;
   }
 }
-.landing__section-text {
+.landing__section-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,23 +23,23 @@ body {
           background-clip: text;
   animation: gradient-animation 12s infinite alternate;
 }
-.landing__section-text h1 {
+.landing__section-hero h1 {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.landing__section-text h1 span {
+.landing__section-hero h1 span {
   font-size: 2rem;
 }
-.landing__section-text h3 {
+.landing__section-hero h3 {
   font-size: 0.7rem;
   font-weight: 500;
 }
-.landing__section-text p {
+.landing__section-hero p {
   font-style: italic;
   font-size: 0.8rem;
   font-weight: 400;
 }
-.landing__section-text a {
+.landing__section-hero a {
   width: 200px;
   height: 50px;
   background-color: transparent;
@@ -52,7 +52,7 @@ body {
   gap: 10px;
   transition: all ease-out 300ms;
 }
-.landing__section-text a:hover {
+.landing__section-hero a:hover {
   color: #f6f8f9;
   background-color: #130423;
 }
@@ -63,30 +63,30 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .landing__section-text {
+  .landing__section-hero {
     width: 100%;
     padding: 0 3rem;
   }
-  .landing__section-text h1 {
+  .landing__section-hero h1 {
     font-size: 2rem;
   }
-  .landing__section-text h1 span {
+  .landing__section-hero h1 span {
     font-size: 5.5rem;
   }
-  .landing__section-text h3,
-  .landing__section-text p {
+  .landing__section-hero h3,
+  .landing__section-hero p {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .landing__section-text h1 {
+  .landing__section-hero h1 {
     font-size: 2.5rem;
   }
-  .landing__section-text h1 span {
+  .landing__section-hero h1 span {
     font-size: 8rem;
   }
-  .landing__section-text h3,
-  .landing__section-text p {
+  .landing__section-hero h3,
+  .landing__section-hero p {
     font-size: 1.3rem;
   }
 }/*# sourceMappingURL=landing.css.map */
