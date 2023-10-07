@@ -103,7 +103,7 @@ body {
   background-image: $gradient-mix;
   background-size: 350%;
   background-clip: text;
-  animation: gradient-animation 12s infinite alternate;
+  animation: gradient-animation 10s infinite alternate;
 }
 
 @mixin glass-background {

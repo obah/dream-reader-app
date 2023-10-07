@@ -21,7 +21,7 @@ body {
   background-size: 350%;
   -webkit-background-clip: text;
           background-clip: text;
-  animation: gradient-animation 12s infinite alternate;
+  animation: gradient-animation 10s infinite alternate;
 }
 .landing__section-hero h1 {
   font-size: 1.4rem;
@@ -42,7 +42,7 @@ body {
 .landing__section-hero a {
   width: 200px;
   height: 50px;
-  background-color: transparent;
+  background: linear-gradient(#f2d41e, #f2d41e) 100%/0 100% no-repeat;
   border: 1px #130423 solid;
   border-radius: 100vw;
   font-weight: 400;
@@ -50,11 +50,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all ease-out 300ms;
+  transition: background-size 300ms;
 }
 .landing__section-hero a:hover {
-  color: #f6f8f9;
-  background-color: #130423;
+  background-size: 100% 100%;
+  background-position: 0%;
 }
 
 .button-icon {

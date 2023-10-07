@@ -32,18 +32,19 @@
     a {
       width: 200px;
       height: 50px;
-      background-color: transparent;
+      background: linear-gradient($primary-color, $primary-color) 100% / 0 100%
+        no-repeat;
       border: 1px $dream-black solid;
       border-radius: 100vw;
       font-weight: 400;
 
       @include centered-flex;
       gap: 10px;
-      @include transistion-ease-300;
+      transition: background-size 300ms;
 
       &:hover {
-        color: $dream-white;
-        background-color: $dream-black;
+        background-size: 100% 100%;
+        background-position: 0%;
       }
     }
   }

@@ -2,6 +2,10 @@
 @import "recommendedSection";
 @import "readingList";
 
+h1 {
+  @include gradient-text;
+}
+
 .dashboard__main {
   display: flex;
   flex-direction: column;
