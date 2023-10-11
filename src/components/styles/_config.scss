@@ -101,7 +101,7 @@ body {
 @mixin gradient-text {
   color: transparent;
   background-image: $gradient-mix;
-  background-size: 350%;
+  background-size: 200%;
   background-clip: text;
   animation: gradient-animation 10s infinite alternate;
 }

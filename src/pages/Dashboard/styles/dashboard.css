@@ -112,7 +112,7 @@ body {
 h1 {
   color: transparent;
   background-image: linear-gradient(to right, #f2d41e, #2ac1ec);
-  background-size: 350%;
+  background-size: 200%;
   -webkit-background-clip: text;
           background-clip: text;
   animation: gradient-animation 10s infinite alternate;
