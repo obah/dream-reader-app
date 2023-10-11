@@ -1,6 +1,7 @@
 @import "../../../components/styles/config";
 @import "recommendedSection";
 @import "readingList";
+@import "loadingAnimation";
 
 h1 {
   @include gradient-text;
@@ -103,6 +104,13 @@ h1 {
     background: $dream-black;
     color: $dream-white;
   }
+}
+
+.loading-animation {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
 }
 
 @include media_md {

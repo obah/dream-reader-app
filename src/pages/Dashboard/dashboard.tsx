@@ -12,11 +12,11 @@ import RecommendedBooks from "../../components/recommendedBooks";
 export function Dashboard() {
   const searchRef = useRef<HTMLInputElement>(null);
   const sectionRef = useRef(null);
-  const { books, setSearchQuery, clearBooks } = useBooks();
+  const { books, isLoading, clearBooks, getBooks } = useBooks();
 
   const handleSearch = () => {
     const searchQuery = searchRef.current?.value;
-    setSearchQuery(searchQuery);
+    getBooks(searchQuery);
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -59,7 +59,18 @@ export function Dashboard() {
           </button>
         </div>
 
-        {books.length > 0 && (
+        {isLoading ? (
+          <div className="loading-animation">
+            <div className="book">
+              <div className="book__pg-shadow"></div>
+              <div className="book__pg"></div>
+              <div className="book__pg book__pg--2"></div>
+              <div className="book__pg book__pg--3"></div>
+              <div className="book__pg book__pg--4"></div>
+              <div className="book__pg book__pg--5"></div>
+            </div>
+          </div>
+        ) : !isLoading && books.length > 0 ? (
           <div className="dashboard__main-results">
             <motion.div
               className="results__wrapper"
@@ -80,7 +91,7 @@ export function Dashboard() {
               </button>
             </div>
           </div>
-        )}
+        ) : null}
       </section>
 
       <section className="recommended__section full-background">

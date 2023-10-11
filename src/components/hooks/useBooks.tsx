@@ -1,14 +1,15 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BookData, GoogleBooksResponse, InputRef } from "../../types";
 
 function useBooks() {
-  const [searchQuery, setSearchQuery] = useState<InputRef>("");
   const [books, setBooks] = useState<BookData[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const getBooks = async () => {
+  const getBooks = async (query: InputRef) => {
+    setIsLoading(true);
     const response = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=9`
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=9`
     );
 
     if (response && response.data) {
@@ -24,19 +25,14 @@ function useBooks() {
 
       setBooks(filteredRes);
     }
+    setIsLoading(false);
   };
 
   const clearBooks = () => {
-    setSearchQuery("");
     setBooks([]);
   };
 
-  useEffect(() => {
-    getBooks();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchQuery]);
-
-  return { books, setSearchQuery, clearBooks };
+  return { books, isLoading, clearBooks, getBooks };
 }
 
 export default useBooks;
