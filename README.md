@@ -1,24 +1,47 @@
-# React + TypeScript + Vite
+# Dream Reader - The online portal to all your favorite books
 
-This project allows users to have access to their favorite books and keep track of the books they are currently reading, using the [Google Books API](https://developers.google.com/books).
+This project is a book reading website powered by Google Books API. It helps users keep track of books they are currently reading and also, free books can be read on the website.
 
-It was built using: React
+## Table of contents
 
-## How to use
+- [Overview](#overview)
+  - [The problem](#the-problem)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-- Navigate to the dashboard page
-- Search for your book
-- Add it to your reading list
-- From the reading list, you can preview it or get a free copy if it's available on the Google Books Library
-- Books in your reading list are stored in local storage, so no need to create an account or worrying about losing your list if you leave the website. You can choose to remove a book from your reading list anytime
+## Overview
 
-## Tools Used
+### The problem
 
-- React + Vite
+Users need and should be able to:
+
+- Search for any book
+- Add and remove books from their favorites
+- View more details about the book and read the book , if available
+
+### Links
+
+- Agents Frontend repo URL: [Visit](https://github.com/obah/dream-reader-app)
+- Live Site URL: [Visit](https://dream-reader.vercel.app/)
+
+## My process
+
+### Built with
+
+- React
 - Typescript
 - SASS
-- Framer motion
 - Google books API
+- Framer motion
 
-Feel free to go through it and play around with it.
-If you have any questions or suggestions for improvement, feel free to let me know. Cheers
+### Continued development
+
+- Add more info on the homepage
+- Add more functionalities with the books in dashboard
+
+## Author
+
+- Website - [Obaloluwa Olusoji](https://www.obaloluwa.com)
