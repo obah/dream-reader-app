@@ -24,7 +24,7 @@ Users need and should be able to:
 
 ### Links
 
-- Agents Frontend repo URL: [Visit](https://github.com/obah/dream-reader-app)
+- Dream Reader repo URL: [Visit](https://github.com/obah/dream-reader-app)
 - Live Site URL: [Visit](https://dream-reader.vercel.app/)
 
 ## My process
